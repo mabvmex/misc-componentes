@@ -1,0 +1,33 @@
+<div [ngClass]="alerta" class="alert" role="alert">
+  A simple primary alert—check it out! &nbsp; &nbsp; &nbsp; {{ '['+ alerta +']' }}
+</div>
+<div>
+  <button type="button" class="btn btn-outline-info" (click)="alerta = 'alert-info'"> reset! </button>
+</div> <br>
+
+<div>
+  <button type="button" class="btn btn-outline-primary" (click)="alerta = 'alert-primary'"> Primary </button> &nbsp;
+  <button type="button" class="btn btn-outline-secondary" (click)="alerta = 'alert-secondary'"> secondary </button>
+  &nbsp;
+  <button type="button" class="btn btn-outline-success" (click)="alerta = 'alert-success'"> success </button> &nbsp;
+  <button type="button" class="btn btn-outline-danger" (click)="alerta = 'alert-danger'"> danger </button> &nbsp;
+  <button type="button" class="btn btn-outline-warning" (click)="alerta = 'alert-warning'"> warning </button> &nbsp;
+  <button type="button" class="btn btn-light" (click)="alerta = 'alert-light'"> light </button> &nbsp;
+  <button type="button" class="btn btn-outline-dark" (click)="alerta = 'alert-dark'"> dark </button> &nbsp;
+</div>
+
+<br><br>
+
+<h3 [ngClass]="{'text-success': propiedades.valor, 'text-danger':!propiedades.valor}">
+  Hola mundo
+</h3>
+
+<button (click)="propiedades.valor = !propiedades.valor" type="button" class="btn" 
+[ngClass]="{ 'btn-outline-danger': !propiedades.valor, 'btn-outline-success': propiedades.valor}">
+  Cambiar
+</button>
+
+<br>
+<br>
+<br>
+<br>
