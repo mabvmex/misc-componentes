@@ -5,13 +5,18 @@ import { AppComponent } from './app.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { ArchivoCSSComponent } from './components/archivo-css/archivo-css.component';
 import { ClasesComponent } from './components/clases/clases.component';
+;
+import { ResaltadoDirective } from './directives/resaltado.directive';
+import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgStyleComponent,
     ArchivoCSSComponent,
-    ClasesComponent
+    ClasesComponent,
+    ResaltadoDirective,
+    NgSwitchComponent
   ],
   imports: [
     BrowserModule

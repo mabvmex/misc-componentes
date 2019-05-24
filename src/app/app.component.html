@@ -1,11 +1,18 @@
 <div class="container main-container"> 
-<h1> Demos <small>Angular</small></h1>
+<h1 appResaltado> Demos <small>Angular</small></h1>
 <hr>
 
 <app-ng-style></app-ng-style>
 <app-archivo-css></app-archivo-css>
 <p  class="m-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-
 <app-clases></app-clases>
+
+
+<p [appResaltado]="'orange'">
+    HOLA MUNDO CON directivas!
+</p>
+
+
+<app-ng-switch></app-ng-switch>
 
 </div>

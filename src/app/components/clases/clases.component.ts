@@ -8,13 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class ClasesComponent implements OnInit {
 
   alerta = 'alert-info';
+  loading = false;
 
   propiedades: Object = {
     valor: true,
-  }
+  };
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ejecutar() {
+  this.loading = true;
+  setTimeout(() => this.loading = false, 3000);
   }
 
 }

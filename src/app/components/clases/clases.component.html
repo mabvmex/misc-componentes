@@ -22,12 +22,22 @@
   Hola mundo
 </h3>
 
-<button (click)="propiedades.valor = !propiedades.valor" type="button" class="btn" 
-[ngClass]="{ 'btn-outline-danger': !propiedades.valor, 'btn-outline-success': propiedades.valor}">
+<button (click)="propiedades.valor = !propiedades.valor" type="button" class="btn"
+  [ngClass]="{ 'btn-outline-danger': !propiedades.valor, 'btn-outline-success': propiedades.valor}">
   Cambiar
 </button>
 
-<br>
-<br>
-<br>
-<br>
+<br> <br> <br> <br>
+
+<h3> Proceso Asíncrono </h3>
+
+<button (click)="ejecutar()" class="btn btn-primary" type="button" name="button" [disabled]="loading">
+  <i [ngClass]="{'fa-save': !loading, 'fa-refresh fa-spin':loading }" class="fa"></i>
+  <!-- save si y solo si no está cargando, y refresh si y solo si hace loading -->
+  <span *ngIf="!loading">&nbsp; Guardar Cambios</span>
+  <span *ngIf="loading">&nbsp; Guardando...</span>
+</button>
+<br><br>
+
+
+<br><br>
